@@ -92,6 +92,8 @@ void muatFile() {
     jumlah = 0;
     string line;
 
+    getline(file, line); //melewati header
+
     while (getline(file, line)) {
         int p1 = line.find('|');
         int p2 = line.find('|', p1 + 1);
@@ -355,4 +357,5 @@ int main() {
     muatFile();
     menu();
     return 0;
+
 }
